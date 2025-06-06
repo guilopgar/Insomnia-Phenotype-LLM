@@ -73,7 +73,7 @@ def main(args):
         args.model_name,
         num_labels=2
     )
-    print(torchinfo.summary(model))
+    torchinfo.summary(model)
 
     training_args = TrainingArguments(
         tf32=True,
