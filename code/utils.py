@@ -4,6 +4,7 @@ from sklearn.metrics import f1_score, precision_score, recall_score, classificat
 import json
 from enum import Enum
 from pydantic import BaseModel
+import torch
 
 
 # Insomnia-related labels
@@ -109,6 +110,23 @@ def format_preds(arr_preds, df_eval, arr_label, label_conv, pos_value, neg_value
     return pd.DataFrame.from_dict(dict_pred, orient='index'), arr_bad_format
 
 
+# BERT-based models
+class CustomDataset(torch.utils.data.Dataset):
+    def __init__(self, encodings, labels):
+        self.encodings = encodings
+        self.labels = labels
+
+    def __getitem__(self, idx):
+        item = {key: val[idx] for key, val in self.encodings.items()}
+        item['labels'] = self.labels[idx]
+        return item
+
+    def __len__(self):
+        return len(self.labels)
+
+
+
+# Evaluation metrics
 def compute_metrics(df_eval, df_pred, note_label, arr_rule_label):
     print("Note-level evaluation")
     y_note_gs = df_eval[note_label].values
