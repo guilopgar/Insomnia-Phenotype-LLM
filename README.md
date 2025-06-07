@@ -86,7 +86,7 @@ python code/bert.py \
   --bs 4
 ```
 
-### Configurations used in the paper:
+### Configurations used in the paper
 Each model was tuned by selecting the learning rate (LR) and batch size (BS) that yielded the highest F1 score on the validation set:
 
 | Model                | `--model_name`                 | LR   | BS |
