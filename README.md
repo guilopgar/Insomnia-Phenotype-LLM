@@ -92,7 +92,7 @@ Each model was tuned by selecting the learning rate (LR) and batch size (BS) tha
 | Model                | `--model_name`                 | LR   | BS |
 | -------------------- | ------------------------------ | ---- | -- |
 | Clinical-BigBird     | `yikuan8/Clinical-BigBird`     | 2e-5 | 4  |
-| Clinical-Longformer  | `allenai/longformer-base-4096` | 2e-5 | 4  |
+| Clinical-Longformer  | `yikuan8/Clinical-Longformer` | 2e-5 | 4  |
 | BigBird              | `google/bigbird-roberta-base`  | 3e-5 | 3  |
 | Longformer           | `allenai/longformer-base-4096` | 3e-5 | 3  |
 
