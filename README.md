@@ -2,7 +2,7 @@
 This repository contains the code and data used in our study: **"Automated Insomnia Phenotyping from Electronic Health Records: Leveraging Large Language Models to Decode Clinical Narratives"**.
 
 
-## Overview
+## 📝 Overview
 We present a fully automated framework for identifying patients likely experiencing insomnia using unstructured clinical notes. Our framework integrates:
 
 * **Generative large language models (LLMs)** like Llama-3-70B and Llama-3-405B, and
